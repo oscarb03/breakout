@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/obankowski/Library/Autosave Information/breakout/breakout/Assets.xcassets">
+   </FileRef>
+   <FileRef
       location = "self:breakout.xcodeproj">
    </FileRef>
 </Workspace>
