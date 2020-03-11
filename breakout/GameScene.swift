@@ -12,6 +12,7 @@ class GameScene: SKScene {
     
     var ball = SKShapeNode()
     var paddle = SKSpriteNode()
+    var brick = SKSpriteNode()
 
 
     
@@ -19,6 +20,7 @@ class GameScene: SKScene {
         createBackground()
         makeBall()
         makePaddle()
+        makeBrick()
     }
     
     func createBackground() {
@@ -69,6 +71,16 @@ class GameScene: SKScene {
         paddle.physicsBody = SKPhysicsBody(rectangleOf: paddle.size)
         paddle.physicsBody?.isDynamic = false
         addChild(paddle)
+        
+    }
+    
+    func makeBrick() {
+        brick = SKSpriteNode(color: .blue, size: CGSize(width: 50, height: 20))
+        brick.position = CGPoint(x: frame.midX , y: frame.maxY-100)
+        brick.name = "brick"
+        paddle.physicsBody = SKPhysicsBody(rectangleOf: brick.size)
+        brick.physicsBody?.isDynamic = false
+        addChild(brick)
         
     }
     
